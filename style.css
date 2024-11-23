@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', Arial, sans-serif; /* Updated font */
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
 /* Color and spacing variables */
@@ -22,14 +22,12 @@ body {
   align-items: center;
   min-height: 100vh;
   background-color: #f4f4f9;
-  font-size: 1rem; /* Improved default font size */
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1); /* Added global shadow */
+  font-size: 1rem;
 }
 
-/* Calculator container */
 .calculator {
   width: 100%;
-  max-width: 400px;
+  max-width: 400px; /* Set max width */
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -39,11 +37,9 @@ body {
   align-items: center;
 }
 
-/* Display */
 #display {
   width: 100%;
-  height: 250px;
-  font-size: clamp(3rem, 5vw, 6rem); /* Dynamic font size */
+  font-size: clamp(3rem, 5vw, 6rem);
   padding: 20px;
   text-align: right;
   border: 2px solid #ccc;
@@ -51,82 +47,34 @@ body {
   background-color: #f4f4f4;
   color: var(--text-color);
   margin-bottom: 40px;
-  box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
 }
 
 /* Button container */
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-  grid-template-rows: repeat(4, auto); /* 4 rows: 3 for numbers and 1 for 0, =, + */
   grid-gap: 20px; /* Gap between buttons */
   width: 100%;
+  max-width: 400px;
 }
 
 button {
   background-color: var(--primary-bg-color);
   color: white;
-  font-size: 2rem; /* Adjusted font size */
-  padding: 20px; /* Adjusted padding */
+  font-size: 2rem;
+  padding: 20px;
   border: none;
   border-radius: 10px;
   transition: all 0.3s ease;
   cursor: pointer;
-  box-shadow: 0 4px 15px var(--shadow-color);
   text-align: center;
-  min-height: 60px; /* Ensure buttons are large enough */
-}
-
-button:hover {
-  background-color: var(--button-hover-color);
-}
-
-button:active {
-  background-color: var(--button-active-color);
-  box-shadow: inset 0 4px 12px var(--shadow-color);
-  transform: scale(0.98); /* Slightly shrink button on click */
-}
-
-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.6); /* Visible focus ring */
-}
-
-/* Size adjustments for function buttons */
-button:nth-child(5),
-button:nth-child(6),
-button:nth-child(7),
-button:nth-child(8) {
-  background-color: var(--secondary-bg-color); /* Special color for operators */
-}
-
-button:nth-child(9),
-button:nth-child(10),
-button:nth-child(11),
-button:nth-child(12) {
-  background-color: #f39c12; /* Color for number buttons */
+  min-height: 60px;
 }
 
 button:nth-child(13),
 button:nth-child(14),
 button:nth-child(15) {
-  grid-column: span 2; /* Make 0, =, and / span across two columns */
-}
-
-button:nth-child(13) {
-  grid-row: 4;
-  grid-column: 1;
-}
-
-button:nth-child(14) {
-  grid-row: 4;
-  grid-column: 2;
-}
-
-button:nth-child(15) {
-  grid-row: 4;
-  grid-column: 3;
+  grid-column: span 2; /* Make these buttons span across two columns */
 }
 
 /* Responsive Design */
@@ -136,16 +84,7 @@ button:nth-child(15) {
     width: 90%;
   }
 
-  #display {
-    font-size: 6em; /* Slightly smaller display text on smaller screens */
-  }
-
   button {
-    font-size: 3em; /* Slightly smaller button text on smaller screens */
-    padding: 30px; /* Slightly smaller padding on smaller screens */
-  }
-
-  .buttons {
-    grid-gap: 20px; /* Reduced gap on smaller screens */
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
   }
 }
