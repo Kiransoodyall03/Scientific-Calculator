@@ -59,7 +59,8 @@ body {
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
+  grid-template-rows: repeat(3, auto) 1fr; /* Create 3 rows for numbers and 1 row for special buttons */
+  grid-gap: 20px; /* Reduced gap between buttons */
   width: 100%;
 }
 
@@ -108,12 +109,25 @@ button:nth-child(12) {
   background-color: #f39c12; /* Color for number buttons */
 }
 
+button:nth-child(13),
+button:nth-child(14),
+button:nth-child(15) {
+  grid-column: span 2; /* Make 0, =, and + span two columns for better alignment */
+}
+
 button:nth-child(13) {
-  background-color: #e74c3c; /* Clear button color */
+  grid-row: 4;
+  grid-column: 1;
 }
 
 button:nth-child(14) {
-  background-color: #2ecc71; /* Equals button color */
+  grid-row: 4;
+  grid-column: 2;
+}
+
+button:nth-child(15) {
+  grid-row: 4;
+  grid-column: 3;
 }
 
 /* Responsive Design */
