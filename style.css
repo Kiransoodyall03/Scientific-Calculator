@@ -58,25 +58,24 @@ body {
 /* Button container */
 .buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, auto) 1fr; /* Create 3 rows for numbers and 1 row for special buttons */
-  grid-gap: 20px; /* Reduced gap between buttons */
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  grid-template-rows: repeat(4, auto); /* 4 rows: 3 for numbers and 1 for 0, =, + */
+  grid-gap: 20px; /* Gap between buttons */
   width: 100%;
 }
 
 button {
   background-color: var(--primary-bg-color);
   color: white;
-  font-size: 5em;
-  padding: 40px;
+  font-size: 2rem; /* Adjusted font size */
+  padding: 20px; /* Adjusted padding */
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   transition: all 0.3s ease;
   cursor: pointer;
   box-shadow: 0 4px 15px var(--shadow-color);
-  width: 100%;
-  text-align: center; /* Center button text */
-  min-height: 80px; /* Ensure buttons are large enough on touch devices */
+  text-align: center;
+  min-height: 60px; /* Ensure buttons are large enough */
 }
 
 button:hover {
@@ -112,7 +111,7 @@ button:nth-child(12) {
 button:nth-child(13),
 button:nth-child(14),
 button:nth-child(15) {
-  grid-column: span 2; /* Make 0, =, and + span two columns for better alignment */
+  grid-column: span 2; /* Make 0, =, and / span across two columns */
 }
 
 button:nth-child(13) {
