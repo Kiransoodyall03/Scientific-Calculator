@@ -52,7 +52,7 @@ body {
 /* Button container */
 .buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  grid-template-columns: repeat(3, 1fr); /* Change to 3 equal columns */
   grid-gap: 20px; /* Gap between buttons */
   width: 100%;
   max-width: 400px;
@@ -71,10 +71,8 @@ button {
   min-height: 60px;
 }
 
-button:nth-child(13),
-button:nth-child(14),
-button:nth-child(15) {
-  grid-column: span 2; /* Make these buttons span across two columns */
+button:nth-child(13) {
+  grid-column: span 3; /* Make the 0 button span across all columns */
 }
 
 /* Responsive Design */

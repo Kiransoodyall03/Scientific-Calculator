@@ -10,28 +10,30 @@
   <div class="calculator">
     <input type="text" id="display" disabled>
     <div class="buttons">
-      <!-- First Row (1, 2, 3, +) -->
-      <button onclick="press('1')">1</button>
-      <button onclick="press('2')">2</button>
-      <button onclick="press('3')">3</button>
-      <button onclick="press('+')">+</button>
-      
-      <!-- Second Row (4, 5, 6, -) -->
-      <button onclick="press('4')">4</button>
-      <button onclick="press('5')">5</button>
-      <button onclick="press('6')">6</button>
-      <button onclick="press('-')">-</button>
-      
-      <!-- Third Row (7, 8, 9, *) -->
+      <!-- First Row (7, 8, 9) -->
       <button onclick="press('7')">7</button>
       <button onclick="press('8')">8</button>
       <button onclick="press('9')">9</button>
-      <button onclick="press('*')">*</button>
+      <!-- Second Row (4, 5, 6) -->
+      
+      <button onclick="press('4')">4</button>
+      <button onclick="press('5')">5</button>
+      <button onclick="press('6')">6</button>
+      
+      <!-- Third Row (1, 2, 3) -->
+      <button onclick="press('1')">1</button>
+      <button onclick="press('2')">2</button>
+      <button onclick="press('3')">3</button>
       
       <!-- Fourth Row (0, =, /) -->
-      <button onclick="press('0')">0</button>
+      <button onclick="press('0')" style="grid-column: span 3;">0</button> <!-- This button will span across all columns -->
       <button onclick="calculate()">=</button>
       <button onclick="press('/')">/</button>
+      
+      <!-- Additional Function Buttons -->
+      <button onclick="press('+')">+</button>
+      <button onclick="press('-')">-</button>
+      <button onclick="press('*')">*</button>
     </div>    
   </div>
   <script src="script.js"></script>
