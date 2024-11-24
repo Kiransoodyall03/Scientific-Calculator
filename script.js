@@ -2,9 +2,14 @@ let expression = '';
 
 //Button Press
 function press(value) {
-  expression += value;
+  if (value === '(' && /\d$/.test(expression)) {
+    expression += '*' + value;
+  } else {
+    expression += value;
+  }
   document.getElementById('display').value = expression;
 }
+
 
 //Clear Display
 function clearDisplay() {
@@ -80,17 +85,20 @@ function evaluateSimpleExpression(expr) {
 }
 
 function isInvalidExpression(expr) {
-  //Invalid Chars
+  // invalid characters
   if (/[^0-9+\-*/().\sincostansqrt]/.test(expr)) return true;
 
-  //Consec Operators
+  // consecutive operators
   if (/[+\-*/]{2,}/.test(expr)) return true;
 
+  // mismatched parentheses
   const openCount = (expr.match(/\(/g) || []).length;
   const closeCount = (expr.match(/\)/g) || []).length;
   if (openCount !== closeCount) return true;
 
-  if (/sqrt\(|sin\(|cos\(|tan\(/.test(expr) && !/\)/.test(expr)) return true;
+  // invalid order parentheses
+  if (/\)\(/.test(expr)) return true;
 
   return false;
 }
+
