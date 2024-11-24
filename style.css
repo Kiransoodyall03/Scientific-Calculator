@@ -55,8 +55,8 @@ body {
 /* Button container */
 .buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 equal columns for better layout */
-  grid-gap: 15px; /* Reduced gap for a compact design */
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 6px;
   width: 100%;
   max-width: 400px;
 }
@@ -85,10 +85,9 @@ button:active {
   transform: scale(0.98);
 }
 
-/* Clear Button (C) */
 button.clear {
   background-color: var(--error-color);
-  grid-column: span 2; /* Spans two columns for emphasis */
+  grid-column: span 2;
   font-size: 1.5rem;
 }
 
@@ -96,12 +95,10 @@ button.clear:hover {
   background-color: #c0392b;
 }
 
-/* Zero Button */
 button.zero {
-  grid-column: span 2; /* Spans two columns for wide layout */
+  grid-column: span 2;
 }
 
-/* Responsive Design */
 @media (max-width: 600px) {
   .calculator {
     padding: 20px;
