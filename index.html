@@ -14,8 +14,8 @@
       <button onclick="press('7')">7</button>
       <button onclick="press('8')">8</button>
       <button onclick="press('9')">9</button>
-      <!-- Second Row (4, 5, 6) -->
       
+      <!-- Second Row (4, 5, 6) -->
       <button onclick="press('4')">4</button>
       <button onclick="press('5')">5</button>
       <button onclick="press('6')">6</button>
@@ -26,14 +26,23 @@
       <button onclick="press('3')">3</button>
       
       <!-- Fourth Row (0, =, /) -->
-      <button onclick="press('0')" style="grid-column: span 3;">0</button> <!-- This button will span across all columns -->
+      <button onclick="press('0')" style="grid-column: span 2;">0</button>
       <button onclick="calculate()">=</button>
-      <button onclick="press('')">÷</button>
+      <button onclick="press('/')">÷</button>
+      <button onclick="press('*')">×</button>
       
-      <!-- Additional Function Buttons -->
+      <!-- Fifth Row (+, -, sqrt) -->
       <button onclick="press('+')">+</button>
       <button onclick="press('-')">-</button>
-      <button onclick="press('x')">*</button>
+      <button onclick="press('sqrt(')">√</button>
+      
+      <!-- Sixth Row (Trig Functions: sin, cos, tan) -->
+      <button onclick="press('sin(')">sin</button>
+      <button onclick="press('cos(')">cos</button>
+      <button onclick="press('tan(')">tan</button>
+      
+      <!-- Clear Button -->
+      <button onclick="clearDisplay()" style="grid-column: span 3; background-color: red; color: white;">C</button>
     </div>    
   </div>
   <script src="script.js"></script>
